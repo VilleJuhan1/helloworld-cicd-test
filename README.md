@@ -9,10 +9,9 @@ Components:
 
 ## Usage
 
-Fork project and setup the necessary secrets to the repository. Pull the project, make some changes and see if the Docker pipeline works. Next, spin up two containers:
+Fork project and setup the necessary secrets to the repository. Pull the project, make some changes and see if the Docker pipeline works. Next, spin up the two containers:
 
 ```bash
-docker run -d --rm -p 8080:8080 yourrepository/helloworld
 docker compose up
 ```
 

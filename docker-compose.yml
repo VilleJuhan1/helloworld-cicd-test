@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   pipeline:
-    image: villejuhan1/helloworld:latest
-    container_name: pipeline
+    image: ${IMAGE}
+    container_name: pipeline-test
     ports:
       - "8080:8080"
     restart: "no"
@@ -14,6 +14,6 @@ services:
     restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 30 pipeline
+    command: --interval 30 pipeline-test
     depends_on:
-      - pipeline
+      - pipeline-test
