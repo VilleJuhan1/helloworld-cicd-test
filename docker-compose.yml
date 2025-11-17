@@ -1,10 +1,19 @@
 version: '3.8'
 
 services:
+  pipeline:
+    image: villejuhan1/helloworld:latest
+    container_name: pipeline
+    ports:
+      - "8080:8080"
+    restart: "no"
+
   watchtower:
-    image: containrrr/watchtower
+    image: containrrr/watchtower:latest
     container_name: watchtower
     restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 30 villejuhan1/helloworld
+    command: --interval 30 pipeline
+    depends_on:
+      - pipeline

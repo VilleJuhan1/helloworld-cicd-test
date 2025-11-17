@@ -4,12 +4,12 @@ Components:
 
 - index.js and package.json for the Javascript code
 - Dockerfile for building the image
-- Github workflow for building and pushing the app
+- Github workflow for building and pushing the app to Docker Hub
 - Docker-compose file for Watchtower
 
 ## Usage
 
-Fork project and setup the necessary secrets to the repository. Pull the project, make some change and see if the pipeline works. Next, spin up two containers:
+Fork project and setup the necessary secrets to the repository. Pull the project, make some changes and see if the Docker pipeline works. Next, spin up two containers:
 
 ```bash
 docker run -d --rm -p 8080:8080 yourrepository/helloworld
