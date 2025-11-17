@@ -9,7 +9,9 @@ Components:
 
 ## Usage
 
-Fork project and setup the necessary secrets to the repository. Pull the project, make some changes and see if the Docker pipeline works. Next, spin up the two containers:
+1. Fork project and setup the necessary secrets to the repository. Pull the project, make some changes and see if the Docker pipeline works
+2. Create an .env file and add your newly created image there.
+3. Next, spin up the two containers:
 
 ```bash
 docker compose up
